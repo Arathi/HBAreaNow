@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HumbleBundle Area Now
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       Arathi of Nebnizilla
 // @match        https://www.humblebundle.com/*
@@ -263,7 +263,7 @@
         ZM: '赞比亚',
         ZW: '津巴布韦',
     };
-    let countryCode = ravenOptions.tags.country_code;
+    let countryCode = models.request.country_code;
     let $ = jQuery;
     $('section.tabs-navbar-item').append('<div>' + localization[countryCode] + '</div>');
 })();
